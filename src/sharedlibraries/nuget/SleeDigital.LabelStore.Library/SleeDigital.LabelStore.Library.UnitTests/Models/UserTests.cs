@@ -1,6 +1,6 @@
 ﻿using SleeDigital.LabelStore.Library.Models;
 
-namespace SleeDigital.LabelStore.Library.Tests.Models
+namespace SleeDigital.LabelStore.Library.UnitTests.Models
 {
     public class UserTests
     {

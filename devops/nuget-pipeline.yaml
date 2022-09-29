@@ -28,8 +28,8 @@ extends:
     solutionType:  dotnet #
     agentPool: 'windows-latest'
     settings:
-      solutionName:  Example.Solution #
-      solutionDirectory: src/sharedlibraries/nuget/Example.Solution 
+      solutionName:  SleeDigital.LabelStore.Library #
+      solutionDirectory: src/sharedlibraries/nuget/SleeDigital.LabelStore.Library
       developmentFrameworkVersion: 6.0.x #
       buildConfiguration: Release
       sonarcloud:

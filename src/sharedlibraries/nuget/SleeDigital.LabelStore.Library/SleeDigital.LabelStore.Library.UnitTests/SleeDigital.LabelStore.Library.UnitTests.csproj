@@ -28,6 +28,6 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Library\SleeDigital.LabelStore.Library.csproj" />
+    <ProjectReference Include="..\SleeDigital.LabelStore.Library\SleeDigital.LabelStore.Library.csproj" />
   </ItemGroup>
 </Project>

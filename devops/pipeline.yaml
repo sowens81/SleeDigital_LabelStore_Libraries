@@ -1,0 +1,39 @@
+name: $(date:yyyyMMdd)$(rev:.r)
+
+resources:
+  repositories:
+  - repository: templates
+    type: github
+    endpoint: GitHub_sowens81
+    name: sowens81/SleeDigital_Platform_Services_DevOps
+    ref: refs/tags/v1.0.0
+
+trigger:
+  branches:
+    include:
+    - trunk
+    - feature/*
+
+pr:
+  branches:
+    include:
+    - trunk
+
+variables:
+- group: global-secrets
+
+extends:
+  template: devops/templates/types/cicd-libraries.yaml@templates
+  parameters:
+    solutionType:  dotnet #
+    agentPool: 'windows-latest'
+    settings:
+      solutionName:  Example.Solution #
+      solutionDirectory: src/sharedlibraries/nuget/Example.Solution 
+      developmentFrameworkVersion: 6.0.x #
+      buildConfiguration: Release
+      sonarcloud:
+        serviceConnection: SonarCloud_SleeDigital_LabelStore_Libraries
+        organization: sowens81
+        projectKey: sowens81_SleeDigital_LabelStore_Libraries
+        projectName: SleeDigital_LabelStore_Libraries
